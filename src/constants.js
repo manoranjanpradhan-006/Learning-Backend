@@ -1,1 +1,1 @@
-export const DB_NAME = "chinudb"
+export const DB_NAME = "backend"
