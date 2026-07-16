@@ -29,8 +29,21 @@ const userSchema = new Schema(
         },
         coverImage: {
             type: String
+        },
+        watchHistory: [
+            {
+                type: Schema.Types.ObjectId,
+                ref: "video"
+            },
+        ],
+        password: {
+            type: String,
+            required: [true, 'Password is required']
+        },
+        refreshTokens: {
+            type: String
         }
-    }
+    }, { timestamps: true }
 )
 
 export const User = mongoose.model("User", userSchema)
