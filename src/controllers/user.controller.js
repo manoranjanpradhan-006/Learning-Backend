@@ -80,6 +80,8 @@ const registerUser = asyncHandler(async (req, res) => {
 })
 
 const loginUser = asyncHandler(async (req, res) => {
+   
+   
     // req body -> data
     // username or email
     // find the user
@@ -104,7 +106,7 @@ const loginUser = asyncHandler(async (req, res) => {
 
     const isPasswordValid = await user.isPasswordCorrect(password)
 
-    if (!user) {
+    if (!isPasswordValid) {
         throw new ApiError(401, "Invalid user credentials")
     }
 
