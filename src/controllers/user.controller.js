@@ -176,10 +176,17 @@ const refreshAccessToken = asyncHandler(async (req, res) => {
         throw new ApiError(401, "Unauthorized request")
     }
 
-    jwt.verify(
+    const decodedToken = jwt.verify(
         incomingRefreshToken,
         process.env.REFRESH_TOKEN_SECRET
     )
+
+    const user = await User.findById?._id
+
+    if (!user) {
+        throw new ApiError(401, "Invalid refresh token.")
+    }
+
 })
 
 export {
