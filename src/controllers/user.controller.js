@@ -231,8 +231,6 @@ const changeCurrentPassword = asyncHandler(async (req, res) => {
     await user.save({ validateBeforeSave: false })
 })
 
-//
-
 export {
     registerUser,
     loginUser,
