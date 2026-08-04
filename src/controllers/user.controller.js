@@ -273,5 +273,6 @@ export {
     logoutUser,
     refreshAccessToken,
     changeCurrentPassword,
-    getCurrentUser
+    getCurrentUser,
+    updateUserDetails
 }
