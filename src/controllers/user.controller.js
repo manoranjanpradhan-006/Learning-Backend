@@ -337,5 +337,6 @@ export {
     changeCurrentPassword,
     getCurrentUser,
     updateUserDetails,
-    updateUserAvatar
+    updateUserAvatar,
+    updateUserCoverImage
 }
