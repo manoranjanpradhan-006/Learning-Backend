@@ -233,11 +233,7 @@ const changeCurrentPassword = asyncHandler(async (req, res) => {
     return res
         .status(200)
         .json(
-            new ApiResponse(
-                200,
-                {},
-                "Password changed"
-            )
+            new ApiResponse(200, {}, "Password changed")
         )
 })
 
@@ -276,11 +272,7 @@ const updateUserDetails = asyncHandler(async (req, res) => {
     return res
         .status(200)
         .json(
-            new ApiResponse(
-                200,
-                user,
-                "Account details updated successfully"
-            )
+            new ApiResponse(200, user, "Account details updated successfully")
         )
 
 })
@@ -342,14 +334,7 @@ const updateUserCoverImage = asyncHandler(async (req, res) => {
 
     return res
         .status(200)
-        .json(
-            new ApiResponse
-                (
-                    200,
-                    user,
-                    "Cover image updated successfully"
-                )
-        )
+        .json(new ApiResponse(200, user, "Cover image updated successfully"))
 })
 
 export {
