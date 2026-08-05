@@ -366,6 +366,11 @@ const getUserChannelProfile = asyncHandler(async (req, res) => {
                 foreignField: "subscriber",
                 as: "subscribedTo"
             }
+        },
+        {
+            $addFields: {
+
+            }
         }
     ])
 })
