@@ -23,6 +23,7 @@ const generateAccessAndRefreshTokens = async (userId) => {
 }
 
 const registerUser = asyncHandler(async (req, res) => {
+
     const { fullName, email, userName, password } = req.body
 
     console.log("email: ", email);
@@ -82,6 +83,7 @@ const registerUser = asyncHandler(async (req, res) => {
     return res.status(201).json(
         new ApiResponse(200, createdUser, "User registered successfully")
     )
+
 })
 
 const loginUser = asyncHandler(async (req, res) => {
