@@ -411,15 +411,20 @@ const getUserChannelProfile = asyncHandler(async (req, res) => {
         )
 })
 
+const getWatchHistory = asyncHandler(async (req, res) => {
+
+})
+
 export {
-    registerUser,
     loginUser,
     logoutUser,
-    refreshAccessToken,
-    changeCurrentPassword,
+    registerUser,
     getCurrentUser,
-    updateUserDetails,
+    getWatchHistory,
     updateUserAvatar,
+    updateUserDetails,
+    refreshAccessToken,
     updateUserCoverImage,
+    changeCurrentPassword,
     getUserChannelProfile
 }
